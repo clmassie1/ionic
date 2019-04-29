@@ -1,5 +1,7 @@
 {
   "name": "planet-jesus-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

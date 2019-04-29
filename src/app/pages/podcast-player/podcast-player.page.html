@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.episode_title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+      <img src="{{ information?.image_url }}">
+      <ion-card-header>
+        <ion-card-subtitle>Episode Title</ion-card-subtitle>
+        <ion-card-title>{{ information?.episode_title }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+      
+    <audio controls>
+        <source src="{{information?.episode_url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>podcast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- <ion-item button *ngFor="let pods of podcasts?.reverse()" [routerLink]="['/', 'podcast', pods.id]">
+      {{pods.episode_title}},  {{pods.id}}
+    </ion-item> -->
+
+
+    <ion-card button *ngFor="let pods of podcasts?.reverse()" [routerLink]="['/', 'podcast', pods.id]">
+        <img src="{{ pods.image_url }}">
+        <ion-card-header>
+          <ion-card-subtitle>Episode Title</ion-card-subtitle>
+          <ion-card-title>{{ pods.episode_title }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-card-subtitle>Episode Description</ion-card-subtitle>
+          {{ pods.episode_description }}
+        </ion-card-content>
+      </ion-card>
+
+
+      
+
+
+  </ion-list>
+
+</ion-content>
